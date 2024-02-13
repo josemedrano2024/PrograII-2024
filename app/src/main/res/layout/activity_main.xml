@@ -29,7 +29,7 @@
 
                 <RelativeLayout
 
-                    android:id="@+id/tabLongitud"
+                    android:id="@+id/Longitud"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -87,7 +87,7 @@
                 </RelativeLayout>
 
                 <LinearLayout
-                    android:id="@+id/tabMonedas"
+                    android:id="@+id/Monedas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -95,7 +95,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/tabAlmacenamiento"
+                    android:id="@+id/Almacenamiento"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
