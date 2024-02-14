@@ -32,4 +32,11 @@
         <item>Rupia</item>
         <item>Peso</item>
     </string-array>
+
+    <string-array name="spnTiempo">
+        <item>Milisegundos</item>
+        <item>Segundos</item>
+        <item>Minutos</item>
+        <item>Horas</item>
+    </string-array>
 </resources>
