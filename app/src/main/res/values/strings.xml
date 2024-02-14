@@ -19,4 +19,17 @@
         <item>Terabytes</item>
         <item>Petabyte</item>
     </string-array>
+
+    <string-array name="spnMoneda">
+        <item>Dólar estadounidense</item>
+        <item> Euro</item>
+        <Item> Yen japonés</Item>
+        <Item>Libra esterlina</Item>
+        <item>Franco suizo</item>
+        <item>Dólar canadiense</item>
+        <item>Dólar australiano</item>
+        <item>Yuan chino</item>
+        <item>Rupia india</item>
+        <item>Peso mexicano</item>
+    </string-array>
 </resources>

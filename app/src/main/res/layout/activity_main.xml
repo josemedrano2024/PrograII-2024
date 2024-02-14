@@ -125,13 +125,55 @@
 
                 </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/Monedas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/lblDeMoneda"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="DE:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/lblAMoneda"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="A:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spnDeMoneda"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnMoneda"/>
+                    <Spinner
+                        android:id="@+id/spnAMoneda"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnMoneda"/>
+                    <EditText
+                        android:id="@+id/txtCantidad1"
+                        android:layout_below="@+id/spnAMoneda"
+                        android:layout_marginTop="40dp"
+                        android:hint="Cantidad a convertir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/btnConvertir1"
+                        android:layout_below="@+id/txtCantidad1"
+                        android:layout_marginTop="40dp"
+                        android:text="CONVERTIR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
 
-                </LinearLayout>
+                </RelativeLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>

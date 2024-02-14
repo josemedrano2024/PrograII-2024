@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Respuesta: "+ respuesta, Toast.LENGTH_LONG).show();
             }
         });
+
         btn=findViewById(R.id.btnConvertir);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,11 +63,31 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Respuesta: "+ respuesta, Toast.LENGTH_LONG).show();
             }
         });
+
+        btn=findViewById(R.id.btnConvertir1);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spn = findViewById(R.id.spnDeMoneda);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnAMoneda);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtCantidad1);
+                double cantidad = Double.parseDouble(tempVal.getText().toString());
+
+                double respuesta = miObj.convertir(0, de, a, cantidad);
+                Toast.makeText(getApplicationContext(), "Respuesta: "+ respuesta, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
 class conversores{
     double[][] valores ={
             {1, 100, 39.3701, 3.28084, 1.193, 1.09361, 0.001, 0.000621371},
+            {1, 1024, 1048576, 1073741824, 1099511627776.0, 1125899906842624.0, 1152921504606846976.0},
+            {1, 0.82, 114.42, 0.74, 0.93, 1.27, 1.33, 6.37, 74.27, 19.94},
     };
     public double convertir(int opcion, int de, int a, double cantidad){
         return valores[opcion][a]/valores[opcion][de]*cantidad;
