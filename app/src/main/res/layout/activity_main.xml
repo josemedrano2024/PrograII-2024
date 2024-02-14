@@ -76,56 +76,6 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/Almacenamiento"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/lblDealmacenamiento"
-                        android:layout_marginTop="60dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="DE:"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/lblAalmacenamiento1"
-                        android:layout_marginTop="120dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="A:"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <Spinner
-                        android:id="@+id/spnDeAlmacenamiento"
-                        android:layout_marginTop="60dp"
-                        android:layout_marginLeft="60dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:entries="@array/spnAlmacenamiento"/>
-                    <Spinner
-                        android:id="@+id/spnAalmacenamiento"
-                        android:layout_marginTop="120dp"
-                        android:layout_marginLeft="60dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:entries="@array/spnAlmacenamiento"/>
-                    <EditText
-                        android:id="@+id/txtCantidad"
-                        android:layout_below="@+id/spnAalmacenamiento"
-                        android:layout_marginTop="40dp"
-                        android:hint="Cantidad a convertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <Button
-                        android:id="@+id/btnConvertir"
-                        android:layout_below="@+id/txtCantidad"
-                        android:layout_marginTop="40dp"
-                        android:text="CONVERTIR"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                </RelativeLayout>
-
-                <RelativeLayout
                     android:id="@+id/Monedas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -168,6 +118,57 @@
                     <Button
                         android:id="@+id/btnConvertir1"
                         android:layout_below="@+id/txtCantidad1"
+                        android:layout_marginTop="40dp"
+                        android:text="CONVERTIR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/Almacenamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/lblDealmacenamiento"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="DE:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/lblAalmacenamiento1"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="A:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spnDeAlmacenamiento"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnAlmacenamiento"/>
+                    <Spinner
+                        android:id="@+id/spnAalmacenamiento"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnAlmacenamiento"/>
+                    <EditText
+                        android:id="@+id/txtCantidad"
+                        android:layout_below="@+id/spnAalmacenamiento"
+                        android:layout_marginTop="40dp"
+                        android:hint="Cantidad a convertir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/btnConvertir"
+                        android:layout_below="@+id/txtCantidad"
                         android:layout_marginTop="40dp"
                         android:text="CONVERTIR"
                         android:layout_width="match_parent"
