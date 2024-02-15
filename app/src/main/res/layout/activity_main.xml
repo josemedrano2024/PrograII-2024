@@ -65,7 +65,8 @@
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a convertir"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
                     <Button
                         android:id="@+id/btnConvertirLongitud"
                         android:layout_below="@+id/txtCantidadLongitud"
@@ -114,7 +115,8 @@
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a convertir"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
                     <Button
                         android:id="@+id/btnConvertir1"
                         android:layout_below="@+id/txtCantidad1"
@@ -164,7 +166,8 @@
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a convertir"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
                     <Button
                         android:id="@+id/btnConvertir"
                         android:layout_below="@+id/txtCantidad"
@@ -175,54 +178,6 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/Tiempo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/lblDeTiempo"
-                        android:layout_marginTop="60dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="DE:"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/lblATiempo"
-                        android:layout_marginTop="120dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="A:"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <Spinner
-                        android:id="@+id/spnDeTiempo"
-                        android:layout_marginTop="60dp"
-                        android:layout_marginLeft="60dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:entries="@array/spnTiempo"/>
-                    <Spinner
-                        android:id="@+id/spnATiempo"
-                        android:layout_marginTop="120dp"
-                        android:layout_marginLeft="60dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:entries="@array/spnTiempo"/>
-                    <EditText
-                        android:id="@+id/txtCantidadL"
-                        android:layout_below="@+id/spnATiempo"
-                        android:layout_marginTop="40dp"
-                        android:hint="Cantidad a convertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <Button
-                        android:id="@+id/btnConvertirL"
-                        android:layout_below="@+id/txtCantidadL"
-                        android:layout_marginTop="40dp"
-                        android:text="CONVERTIR"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                </RelativeLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>
