@@ -32,4 +32,17 @@
         <item>Rupia</item>
         <item>Peso</item>
     </string-array>
+
+    <string-array name="spnTiempo">
+        <item>Microsegundos</item>
+        <item>Milisegundos</item>
+        <item>Segundos</item>
+        <item>Minutos</item>
+        <item>Horas</item>
+        <item>Dias</item>
+        <item>Semanas</item>
+        <item>Meses</item>
+        <item>Años</item>
+        <item>Siglos</item>
+    </string-array>
 </resources>

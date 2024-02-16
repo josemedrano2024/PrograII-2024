@@ -17,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     Button btn;
     Conversores objConversor = new Conversores();
     CalcularMoneda objMoneda = new CalcularMoneda();
+    CalcularAlmacenamiento objAlmacenamiento = new CalcularAlmacenamiento();
+    CalcularTiempo objTiempo = new CalcularTiempo();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +74,49 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btn = findViewById(R.id.btnConvertir);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spn = findViewById(R.id.spnDeAlmacenamiento);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnAalmacenamiento);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtCantidad);
+                try {
+                    double cantidad = Double.parseDouble(tempVal.getText().toString());
+                    double resp = objAlmacenamiento.convertir(0, de, a, cantidad);
+                    mostrarResultado(resp);
+                } catch (NumberFormatException e) {
+                    mostrarError("Ingresa una cantidad válida.");
+                }
+            }
+        });
+
+        btn = findViewById(R.id.btnConvertir2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spn = findViewById(R.id.spnDeTiempo);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnATiempo);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtCantidad2);
+                try {
+                    double cantidad = Double.parseDouble(tempVal.getText().toString());
+                    double resp = objTiempo.convertir(0, de, a, cantidad);
+                    mostrarResultado(resp);
+                } catch (NumberFormatException e) {
+                    mostrarError("Ingresa una cantidad válida.");
+                }
+            }
+        });
+
     }
 
     private void mostrarResultado(double resultado) {
@@ -95,6 +142,26 @@ class CalcularMoneda {
 class Conversores {
     double[][] valores = {
             {1, 100, 39.3701, 3.28084, 1.193, 1.09361, 0.001, 0.000621371}
+    };
+
+    public double convertir(int opcion, int de, int a, double cantidad) {
+        return valores[opcion][a] / valores[opcion][de] * cantidad;
+    }
+}
+
+class CalcularAlmacenamiento {
+    double[][] valores =  {
+            {}
+    };
+
+    public double convertir(int opcion, int de, int a, double cantidad) {
+        return valores[opcion][a] / valores[opcion][de] * cantidad;
+    }
+}
+
+class CalcularTiempo {
+    double[][] valores =  {
+            {}
     };
 
     public double convertir(int opcion, int de, int a, double cantidad) {
