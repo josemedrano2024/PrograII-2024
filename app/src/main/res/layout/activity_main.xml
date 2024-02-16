@@ -361,7 +361,7 @@
                         android:layout_marginLeft="60dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:entries="@array/spnTiempo"/>
+                        android:entries="@array/spnTransferencia"/>
                     <EditText
                         android:id="@+id/txtCantidad7"
                         android:layout_below="@+id/spnATransferencia"

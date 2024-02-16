@@ -79,16 +79,15 @@
     </string-array>
 
     <string-array name="spnTransferencia">
-        <item>Microsegundos</item>
-        <item>Milisegundos</item>
-        <item>Segundos</item>
-        <item>Minutos</item>
-        <item>Horas</item>
-        <item>Dias</item>
-        <item>Semanas</item>
-        <item>Meses</item>
-        <item>Años</item>
-        <item>Siglos</item>
+        <item>Bps</item>
+        <item>Kbps</item>
+        <item>Mbps</item>
+        <item>Gbps</item>
+        <item>KBps</item>
+        <item>MBps</item>
+        <item>GBps</item>
+        <item>TBps</item>
+        <item>TBps</item>
     </string-array>
 
 </resources>

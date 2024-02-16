@@ -221,7 +221,7 @@ class Conversores {
 
 class CalcularAlmacenamiento {
     double[][] valores =  {
-            {}
+            {1,0.001,0.000001,1e-9,1e-12,1e-15,8,0.008,0.000008,8e-9,8e-12,8e-15}
     };
 
     public double convertir(int opcion, int de, int a, double cantidad) {
@@ -231,7 +231,7 @@ class CalcularAlmacenamiento {
 
 class CalcularTiempo {
     double[][] valores =  {
-            {}
+            {31557600,315576000,31557600,525960,8766,365.25,52.1785,12,1}
     };
 
     public double convertir(int opcion, int de, int a, double cantidad) {
@@ -241,7 +241,7 @@ class CalcularTiempo {
 
 class CalcularVolumen {
     double[][] valores =  {
-            {}
+            {0.001,1,1000,1000000,0.035314666721489, 61.0237440,0.2641720523}
     };
 
     public double convertir(int opcion, int de, int a, double cantidad) {
@@ -251,7 +251,7 @@ class CalcularVolumen {
 
 class CalcularMasa {
     double[][] valores =  {
-            {}
+            {1,0.001,1.0e-6,1.0e-9,0.45359237,0.028349523125,907.18474,1000,6350.29}
     };
 
     public double convertir(int opcion, int de, int a, double cantidad) {
@@ -261,7 +261,7 @@ class CalcularMasa {
 
 class CalcularTransferencia {
     double[][] valores =  {
-            {}
+            {1,1000,100000,1000000,1000000000,1000000000}
     };
 
     public double convertir(int opcion, int de, int a, double cantidad) {
