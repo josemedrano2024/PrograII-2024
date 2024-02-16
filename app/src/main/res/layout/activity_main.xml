@@ -60,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:entries="@array/spnLongitud"/>
                     <EditText
-                        android:id="@+id/txtCantidadLongitud"
+                        android:id="@+id/txtCantidad1"
                         android:layout_below="@+id/spnALongitud"
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a convertir"
@@ -68,8 +68,8 @@
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"/>
                     <Button
-                        android:id="@+id/btnConvertirLongitud"
-                        android:layout_below="@+id/txtCantidadLongitud"
+                        android:id="@+id/btnConvertir1"
+                        android:layout_below="@+id/txtCantidad1"
                         android:layout_marginTop="40dp"
                         android:text="CONVERTIR"
                         android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                         android:layout_height="wrap_content"
                         android:entries="@array/spnMoneda"/>
                     <EditText
-                        android:id="@+id/txtCantidad1"
+                        android:id="@+id/txtCantidad2"
                         android:layout_below="@+id/spnAMoneda"
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a convertir"
@@ -118,8 +118,8 @@
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"/>
                     <Button
-                        android:id="@+id/btnConvertir1"
-                        android:layout_below="@+id/txtCantidad1"
+                        android:id="@+id/btnConvertir2"
+                        android:layout_below="@+id/txtCantidad2"
                         android:layout_marginTop="40dp"
                         android:text="CONVERTIR"
                         android:layout_width="match_parent"
@@ -140,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:id="@+id/lblAalmacenamiento1"
+                        android:id="@+id/lblAalmacenamiento"
                         android:layout_marginTop="120dp"
                         android:layout_marginLeft="20dp"
                         android:text="A:"
@@ -161,7 +161,7 @@
                         android:layout_height="wrap_content"
                         android:entries="@array/spnAlmacenamiento"/>
                     <EditText
-                        android:id="@+id/txtCantidad"
+                        android:id="@+id/txtCantidad3"
                         android:layout_below="@+id/spnAalmacenamiento"
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a convertir"
@@ -169,8 +169,8 @@
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"/>
                     <Button
-                        android:id="@+id/btnConvertir"
-                        android:layout_below="@+id/txtCantidad"
+                        android:id="@+id/btnConvertir3"
+                        android:layout_below="@+id/txtCantidad3"
                         android:layout_marginTop="40dp"
                         android:text="CONVERTIR"
                         android:layout_width="match_parent"
@@ -183,6 +183,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/lblDeTiempo"
                         android:layout_marginTop="60dp"
@@ -210,9 +211,9 @@
                         android:layout_marginLeft="60dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:entries="@array/spntiempo"/>
+                        android:entries="@array/spnTiempo"/>
                     <EditText
-                        android:id="@+id/txtCantidad2"
+                        android:id="@+id/txtCantidad4"
                         android:layout_below="@+id/spnATiempo"
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a convertir"
@@ -220,13 +221,162 @@
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"/>
                     <Button
-                        android:id="@+id/btnConvertir2"
-                        android:layout_below="@+id/txtCantidad2"
+                        android:id="@+id/btnConvertir4"
+                        android:layout_below="@+id/txtCantidad4"
                         android:layout_marginTop="40dp"
                         android:text="CONVERTIR"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
+                </RelativeLayout>
 
+                <RelativeLayout
+                    android:id="@+id/Volumen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/lblDeVolumen"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="DE:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/lblAVolumen"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="A:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spnDeVolumen"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnVolumen"/>
+                    <Spinner
+                        android:id="@+id/spnAVolumen"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnVolumen"/>
+                    <EditText
+                        android:id="@+id/txtCantidad5"
+                        android:layout_below="@+id/spnAVolumen"
+                        android:layout_marginTop="40dp"
+                        android:hint="Cantidad a convertir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
+                    <Button
+                        android:id="@+id/btnConvertir5"
+                        android:layout_below="@+id/txtCantidad5"
+                        android:layout_marginTop="40dp"
+                        android:text="CONVERTIR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Masa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/lblDeMasa"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="DE:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/lblAMasa"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="A:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spnDeMasa"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnMasa"/>
+                    <Spinner
+                        android:id="@+id/spnAMasa"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnMasa"/>
+                    <EditText
+                        android:id="@+id/txtCantidad6"
+                        android:layout_below="@+id/spnAMasa"
+                        android:layout_marginTop="40dp"
+                        android:hint="Cantidad a convertir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
+                    <Button
+                        android:id="@+id/btnConvertir6"
+                        android:layout_below="@+id/txtCantidad6"
+                        android:layout_marginTop="40dp"
+                        android:text="CONVERTIR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Transferencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/lblDeTransferencia"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="DE:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/lblATransferencia"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="A:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spnDeTransferencia"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnTransferencia"/>
+                    <Spinner
+                        android:id="@+id/spnATransferencia"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/spnTiempo"/>
+                    <EditText
+                        android:id="@+id/txtCantidad7"
+                        android:layout_below="@+id/spnATransferencia"
+                        android:layout_marginTop="40dp"
+                        android:hint="Cantidad a convertir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
+                    <Button
+                        android:id="@+id/btnConvertir7"
+                        android:layout_below="@+id/txtCantidad7"
+                        android:layout_marginTop="40dp"
+                        android:text="CONVERTIR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
                 </RelativeLayout>
 
             </FrameLayout>

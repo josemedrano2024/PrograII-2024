@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     CalcularMoneda objMoneda = new CalcularMoneda();
     CalcularAlmacenamiento objAlmacenamiento = new CalcularAlmacenamiento();
     CalcularTiempo objTiempo = new CalcularTiempo();
+    CalcularMasa objMasa = new CalcularMasa();
+    CalcularVolumen objVolumen = new CalcularVolumen();
+    CalcularTransferencia objTransferencia = new CalcularTransferencia();
 
 
 
@@ -29,11 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
         tbh = findViewById(R.id.tbhConversores);
         tbh.setup();
-        tbh.addTab(tbh.newTabSpec("LON").setIndicator("LONGITUD", null).setContent(R.id.Longitud));
-        tbh.addTab(tbh.newTabSpec("MON").setIndicator("MONEDAS", null).setContent(R.id.Monedas));
-        tbh.addTab(tbh.newTabSpec("ALM").setIndicator("ALMACENAMIENTO", null).setContent(R.id.Almacenamiento));
+        tbh.addTab(tbh.newTabSpec("LON").setIndicator("LONG", null).setContent(R.id.Longitud));
+        tbh.addTab(tbh.newTabSpec("MON").setIndicator("MON", null).setContent(R.id.Monedas));
+        tbh.addTab(tbh.newTabSpec("ALM").setIndicator("ALM", null).setContent(R.id.Almacenamiento));
+        tbh.addTab(tbh.newTabSpec("TIM").setIndicator("TIM", null).setContent(R.id.Tiempo));
+        tbh.addTab(tbh.newTabSpec("VOL").setIndicator("VOL", null).setContent(R.id.Volumen));
+        tbh.addTab(tbh.newTabSpec("MAS").setIndicator("MAS", null).setContent(R.id.Masa));
+        tbh.addTab(tbh.newTabSpec("TRA").setIndicator("TRAN", null).setContent(R.id.Transferencia));
 
-        btn = findViewById(R.id.btnConvertirLongitud);
+        btn = findViewById(R.id.btnConvertir1);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,52 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 spn = findViewById(R.id.spnALongitud);
                 int a = spn.getSelectedItemPosition();
 
-                tempVal = findViewById(R.id.txtCantidadLongitud);
-                try {
-                    double cantidad = Double.parseDouble(tempVal.getText().toString());
-                    double resp = objConversor.convertir(0, de, a, cantidad);
-                    mostrarResultado(resp);
-                } catch (NumberFormatException e) {
-                    mostrarError("Ingresa una cantidad válida.");
-                }
-            }
-        });
-
-        btn = findViewById(R.id.btnConvertir1);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                spn = findViewById(R.id.spnDeMoneda);
-                int de = spn.getSelectedItemPosition();
-
-                spn = findViewById(R.id.spnAMoneda);
-                int a = spn.getSelectedItemPosition();
-
                 tempVal = findViewById(R.id.txtCantidad1);
                 try {
                     double cantidad = Double.parseDouble(tempVal.getText().toString());
-                    double resp = objMoneda.convertir(0, de, a, cantidad);
-                    mostrarResultado(resp);
-                } catch (NumberFormatException e) {
-                    mostrarError("Ingresa una cantidad válida.");
-                }
-            }
-        });
-
-        btn = findViewById(R.id.btnConvertir);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                spn = findViewById(R.id.spnDeAlmacenamiento);
-                int de = spn.getSelectedItemPosition();
-
-                spn = findViewById(R.id.spnAalmacenamiento);
-                int a = spn.getSelectedItemPosition();
-
-                tempVal = findViewById(R.id.txtCantidad);
-                try {
-                    double cantidad = Double.parseDouble(tempVal.getText().toString());
-                    double resp = objAlmacenamiento.convertir(0, de, a, cantidad);
+                    double resp = objConversor.convertir(0, de, a, cantidad);
                     mostrarResultado(resp);
                 } catch (NumberFormatException e) {
                     mostrarError("Ingresa una cantidad válida.");
@@ -100,16 +65,121 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                spn = findViewById(R.id.spnDeMoneda);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnAMoneda);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtCantidad2);
+                try {
+                    double cantidad = Double.parseDouble(tempVal.getText().toString());
+                    double resp = objMoneda.convertir(0, de, a, cantidad);
+                    mostrarResultado(resp);
+                } catch (NumberFormatException e) {
+                    mostrarError("Ingresa una cantidad válida.");
+                }
+            }
+        });
+
+        btn = findViewById(R.id.btnConvertir3);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spn = findViewById(R.id.spnDeAlmacenamiento);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnAalmacenamiento);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtCantidad3);
+                try {
+                    double cantidad = Double.parseDouble(tempVal.getText().toString());
+                    double resp = objAlmacenamiento.convertir(0, de, a, cantidad);
+                    mostrarResultado(resp);
+                } catch (NumberFormatException e) {
+                    mostrarError("Ingresa una cantidad válida.");
+                }
+            }
+        });
+
+        btn = findViewById(R.id.btnConvertir4);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 spn = findViewById(R.id.spnDeTiempo);
                 int de = spn.getSelectedItemPosition();
 
                 spn = findViewById(R.id.spnATiempo);
                 int a = spn.getSelectedItemPosition();
 
-                tempVal = findViewById(R.id.txtCantidad2);
+                tempVal = findViewById(R.id.txtCantidad4);
                 try {
                     double cantidad = Double.parseDouble(tempVal.getText().toString());
                     double resp = objTiempo.convertir(0, de, a, cantidad);
+                    mostrarResultado(resp);
+                } catch (NumberFormatException e) {
+                    mostrarError("Ingresa una cantidad válida.");
+                }
+            }
+        });
+
+        btn = findViewById(R.id.btnConvertir5);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spn = findViewById(R.id.spnDeVolumen);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnAVolumen);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtCantidad5);
+                try {
+                    double cantidad = Double.parseDouble(tempVal.getText().toString());
+                    double resp = objVolumen.convertir(0, de, a, cantidad);
+                    mostrarResultado(resp);
+                } catch (NumberFormatException e) {
+                    mostrarError("Ingresa una cantidad válida.");
+                }
+            }
+        });
+
+        btn = findViewById(R.id.btnConvertir6);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spn = findViewById(R.id.spnDeMasa);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnAMasa);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtCantidad6);
+                try {
+                    double cantidad = Double.parseDouble(tempVal.getText().toString());
+                    double resp = objMasa.convertir(0, de, a, cantidad);
+                    mostrarResultado(resp);
+                } catch (NumberFormatException e) {
+                    mostrarError("Ingresa una cantidad válida.");
+                }
+            }
+        });
+
+        btn = findViewById(R.id.btnConvertir7);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spn = findViewById(R.id.spnDeTransferencia);
+                int de = spn.getSelectedItemPosition();
+
+                spn = findViewById(R.id.spnATransferencia);
+                int a = spn.getSelectedItemPosition();
+
+                tempVal = findViewById(R.id.txtCantidad7);
+                try {
+                    double cantidad = Double.parseDouble(tempVal.getText().toString());
+                    double resp = objTransferencia.convertir(0, de, a, cantidad);
                     mostrarResultado(resp);
                 } catch (NumberFormatException e) {
                     mostrarError("Ingresa una cantidad válida.");
@@ -160,6 +230,36 @@ class CalcularAlmacenamiento {
 }
 
 class CalcularTiempo {
+    double[][] valores =  {
+            {}
+    };
+
+    public double convertir(int opcion, int de, int a, double cantidad) {
+        return valores[opcion][a] / valores[opcion][de] * cantidad;
+    }
+}
+
+class CalcularVolumen {
+    double[][] valores =  {
+            {}
+    };
+
+    public double convertir(int opcion, int de, int a, double cantidad) {
+        return valores[opcion][a] / valores[opcion][de] * cantidad;
+    }
+}
+
+class CalcularMasa {
+    double[][] valores =  {
+            {}
+    };
+
+    public double convertir(int opcion, int de, int a, double cantidad) {
+        return valores[opcion][a] / valores[opcion][de] * cantidad;
+    }
+}
+
+class CalcularTransferencia {
     double[][] valores =  {
             {}
     };
