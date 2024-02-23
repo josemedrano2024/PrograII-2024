@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         tbh = findViewById(R.id.tbhArea);
         tbh.setup();
         tbh.addTab(tbh.newTabSpec("ARE").setIndicator("AREA", null).setContent(R.id.Area));
+        tbh.addTab(tbh.newTabSpec("AGU").setIndicator("AGUA", null).setContent(R.id.Agua));
+
 
         btn = findViewById(R.id.btnConvertir);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +46,27 @@ public class MainActivity extends AppCompatActivity {
                 } catch (NumberFormatException e) {
                     mostrarError("Ingresa una cantidad válida.");
                 }
+            }
+        });
+
+        btn = findViewById(R.id.btnObtener);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                double Numero1 = Double.parseDouble(tempVal.getText().toString());
+                double respuesta = 0;
+
+                if (Numero1 <= 18) {
+                    respuesta = 6.0;
+                } else if (Numero1 <= 28) {
+                    respuesta = 6.0 + 0.45 * (Numero1 - 18);
+                } else {
+                    respuesta = 6.0 + 0.45 * (28 - 18) + 0.65 * (Numero1 - 28);
+                }
+
+                tempVal = findViewById(R.id.Respuesta);
+                tempVal.setText("Respuesta: " + respuesta);
+
             }
         });
     }

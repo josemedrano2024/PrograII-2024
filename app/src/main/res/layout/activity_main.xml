@@ -34,23 +34,30 @@
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/lblAgua"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="40dp"
                         android:layout_marginLeft="20dp"
                         android:text="Agua consumida en metros cubicos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/Respuesta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Repuesta"
+                        android:layout_marginTop="180dp"
+                        android:layout_marginLeft="20dp"/>
                     <EditText
-                        android:id="@+id/txtValor"
+                        android:id="@+id/txtValor1"
                         android:layout_marginTop="120dp"
                         android:hint="Ingrese una cantidad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"/>
                     <Button
-                        android:id="@+id/btnCalcular"
-                        android:layout_below="@+id/txtValor"
+                        android:id="@+id/btnObtener"
+                        android:layout_below="@+id/txtValor1"
                         android:layout_marginTop="40dp"
-                        android:text="CONVERTIR"
+                        android:text="Calcular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </RelativeLayout>
