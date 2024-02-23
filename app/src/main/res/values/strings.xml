@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Parcial 1 Progra</string>
+    <string name="app_name">Parcial 1</string>
+    <string-array name="spnArea">
+        <item>Vara cuadrada</item>
+        <item>Metro cuadrado</item>
+        <item>Pie cuadrado</item>
+        <item>Manzana</item>
+        <item>Hectaria</item>
+        <item>Yarda cuadrada</item>
+    </string-array>
+
 </resources>
